@@ -11,14 +11,14 @@ document.getElementById('deposit-button').addEventListener('click', function (ev
     // deposit section
     const previousAmountDeposit = document.getElementById('total-deposit')
     const AmountDeposit = previousAmountDeposit.innerText;
-    const totalDeposit = parseInt(AmountDeposit) + parseInt(depositAmount);
+    const totalDeposit = parseFloat(AmountDeposit) + parseFloat(depositAmount);
     previousAmountDeposit.innerText = totalDeposit;
 
     // balance seciton 
 
     const balanceTotal = document.getElementById('total-balance');
     const balanceTotalText = balanceTotal.innerText;
-    const newBalanceTotal = parseInt(balanceTotalText) + parseInt(depositAmount) ;
+    const newBalanceTotal = parseFloat(balanceTotalText) + parseFloat(depositAmount) ;
     balanceTotal.innerText = newBalanceTotal;
 
 
@@ -41,7 +41,7 @@ document.getElementById('withdraw-button').addEventListener('click', function (e
     // withdraw section 
     const previousAmountWithdraw = document.getElementById('total-withdraw');
     const previousAmountWithdrawText = previousAmountWithdraw.innerText;
-    const totalWithdraw =  parseInt(previousAmountWithdrawText) - parseInt(withdrawAmount);
+    const totalWithdraw =  parseFloat(previousAmountWithdrawText) + parseFloat(withdrawAmount);
     console.log(totalWithdraw, typeof totalWithdraw);
     previousAmountWithdraw.innerText = totalWithdraw; 
 
@@ -49,11 +49,10 @@ document.getElementById('withdraw-button').addEventListener('click', function (e
 
     const balanceTotal = document.getElementById('total-balance');
     const balanceTotalText = balanceTotal.innerText;
-    const newBalanceTotal = parseInt(balanceTotalText) - parseInt(withdrawAmount) ;
+    const newBalanceTotal = parseFloat(balanceTotalText) - parseFloat(withdrawAmount) ;
     balanceTotal.innerText = newBalanceTotal;
 
-
-
+    document.getElementsByClassName
     // clear withdraw field 
     withdrawInput.value = '';
 })
