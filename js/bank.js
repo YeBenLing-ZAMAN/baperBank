@@ -1,6 +1,6 @@
 
 document.getElementById('login-button').addEventListener('click', function (event) {
-    event.preventDefault();
+    event.preventDefault(); // eta ager jinista ke stablie kore arki 
     console.log("button clicked"); // for checking
 
 
@@ -16,7 +16,7 @@ document.getElementById('login-button').addEventListener('click', function (even
 
     if(userEmail == "zaman@gmail.com" && userPassword == "zaman"){
         console.log('done');  //for checking
-        // window.location.href = 'banking.html';
+        window.location.href = 'banking.html';
     }else{
         console.log("not found !!");
     }
